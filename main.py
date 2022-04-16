@@ -66,7 +66,7 @@ def get_projects(gl):
 
 
 def main():
-    gitlab_url = str(sys.argv[1]).strip()
+    gitlab_url = sys.stdin.read().strip()
     if gitlab_url != None:
         # anonymous read-only access for public resources (GitLab.com)
         gl = gitlab.Gitlab()
